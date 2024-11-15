@@ -8,31 +8,30 @@ body {
   height: 100vh; /* Full height of the viewport */
   margin: 0;
   font-family: Arial, sans-serif;
- 
+  overflow: hidden; /* Prevent scrollbars from appearing */
 }
 
 h1 {
   color: rgb(49, 18, 103); /* Orange color for titles */
+  font-size: 2rem; /* Responsive font size */
+  text-transform: uppercase; /* Transform text to all uppercase */
+  font-weight:700;
+  
 }
 
-input {
+input, select, button {
   padding: 10px;
-  margin-right: 10px;
+  margin: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 1rem; /* Responsive font size */
 }
 
 button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
   background-color: #007bff; /* Blue background for button */
   color: white;
   cursor: pointer;
   transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
-  margin-left: 5px; /* Add some space between buttons */
-  margin-bottom: 20px;
 }
 
 button:hover {
@@ -40,20 +39,14 @@ button:hover {
 }
 
 select {
-  padding: 10px;
-  margin-right: 10px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   background-color: white;
   cursor: pointer;
 }
 
 /* Enhanced style for the container */
 .draggable-container {
-  padding: 30px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 10px;
   background-color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
   border: 2px solid transparent;
@@ -61,11 +54,54 @@ select {
   background-origin: border-box;
   background-clip: content-box, border-box;
   text-align: center; /* Center text inside the container */
-  max-width: 500px; /* Limit the width for better aesthetics */
+  max-width: 90%; /* Responsive width */
+  max-height: 90%;
   margin: 20px; /* Add some margin for spacing */
-  
+  transition: box-shadow 0.5s ease-in-out; /* Smooth transition for hover effect */
 }
+
 .draggable-container:hover {
   box-shadow: 0 0 20px 10px rgb(4, 129, 164); /* Glowing effect on hover */
-  transition: box-shadow 0.5s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Style for placeholder text */
+input::placeholder {
+  font-size: 0.70rem; /* Change this value to adjust the placeholder font size */
+  color: #888; /* Optional: Change the color of the placeholder text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+
+  input, select, button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .draggable-container {
+    padding: 15px;
+    max-width: 95%;
+  }
+  
+  
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  input, select, button {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .draggable-container {
+    padding: 10px;
+    max-width: 100%;
+  }
 }

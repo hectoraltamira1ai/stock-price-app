@@ -36,7 +36,7 @@ const StockPrice = () => {
   return (
     <div className="draggable-container">
       <h1>Stock Price Checker</h1>
-      <input
+      <input 
         type="text"
         placeholder="Enter stock symbol (e.g., AAPL)"
         value={symbol}
